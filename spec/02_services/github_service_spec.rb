@@ -16,7 +16,7 @@ describe 'GithubService' do
   describe '#authenticate!' do
     before :each do
       @service = GithubService.new
-      @service.authenticate!(ENV["GITHUB_CLIENT"], ENV["GITHUB_SECRET"], "20")
+      @service.authenticate!(ENV["GITHUB_CLIENT_ID"], ENV["GITHUB_CLIENT_SECRET"], "20")
     end
 
     it "sends the correct POST request" do
