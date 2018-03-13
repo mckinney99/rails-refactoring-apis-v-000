@@ -21,7 +21,7 @@ describe 'GithubService' do
 
     it "sends the correct POST request" do
       expect(WebMock).to have_requested(:post, "https://github.com/login/oauth/access_token").
-        with(:body => {"client_id"=> ENV["GITHUB_CLIENT"], "client_secret"=> ENV["GITHUB_SECRET"], "code"=>"20"},
+        with(:body => {"client_id"=> ENV["GITHUB_CLIENT_ID"], "client_secret"=> ENV["GITHUB_CLIENT_SECRET"], "code"=>"20"},
         :headers => {'Accept'=>'application/json'})
     end
 
